@@ -172,12 +172,10 @@ body {
     min-width: 230px;
     color: var(--color4);
     background-color: rgba(235, 211, 248, 0.75);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
     border-radius: 10px;
     position: absolute;
     top: 36px;
-    z-index: 1;
+    z-index: 12;
     visibility: hidden;
     opacity: 0;
     transform: scale(0.97) translateX(-5px);
@@ -188,6 +186,18 @@ body {
     -ms-transition: 0.1s ease-in-out;
     -o-transition: 0.1s ease-in-out;
 }
+
+.dropdown::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
 
 .dropdown a{
     color: var(--color4);
@@ -209,6 +219,7 @@ body {
     gap: 0.5rem;
     padding: 1.2rem;
     font-size: 0.95rem;
+    z-index: inherit;
 }
 
 .dropdown-btn {
