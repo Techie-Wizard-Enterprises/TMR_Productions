@@ -786,6 +786,18 @@ footer .credits .links a:hover {
         backdrop-filter: blur(20px);
     }
 
+    .menu::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 10px;
+        box-shadow: var(--shadow);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+    }
+
     .menu a{
         color: var(--color4);
     }
@@ -809,6 +821,10 @@ footer .credits .links a:hover {
         box-shadow: none;
     }
 
+    .dropdown::before{
+        display: none;
+    }
+
     .menu.show,
     .dropdown.active {
         display: block;
@@ -816,6 +832,7 @@ footer .credits .links a:hover {
 
     .dropdown ul {
         padding-left: 0.3rem;
+        z-index: inherit;
     }
 
     .menu-bar {
